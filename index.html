@@ -8,10 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
 
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/reset.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/slkscre-stylesheet.css" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/slkscreb-stylesheet.css" type="text/css" charset="utf-8" />
 
+<body>
+    <div class="main-container">
+        <button id="computerRock">
+            ROCK
+        </button>
+        <button id="computerPaper">
+            PAPER
+        </button>
+        <button id="computerScissors">
+            SCISSORS
+        </button>
+        <br>
+        <span>Computer Score: </span><span id="computerScore">0</span>    
+        <div>
+            <h1>Rock, Paper, Scissors</h1>
+        </div>
+        <span>Player Score: </span><span id="playerScore">0</span>    
+        <br>    
+        <button id="playerRock" class="playerBtn">
+            ROCK
+        </button>
+        <button id="playerPaper" class="playerBtn">
+            PAPER
+        </button>
+        <button id="playerScissors" class="playerBtn">
+            SCISSORS
+        </button>        
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>

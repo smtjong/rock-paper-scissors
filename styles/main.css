@@ -1,0 +1,52 @@
+html {
+    background: 
+        repeating-linear-gradient(0deg,rgb(253,215,216),rgb(253,215,216) 1px,rgb(253,252,215) 0,rgb(253,252,215) 2px);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    font-family: 'silkscreen_expandednormal', Courier, monospace;
+    font-size: 2rem;
+    text-align: center;
+    color:rgb(240,120,12)
+}
+
+h1 {
+    font-family: 'silkscreen_expandedbold', Courier, monospace;
+    font-size: 2rem;
+}
+
+.main-container {
+
+}
+
+.playerBtn:hover {
+    transform: translateY(-50%);
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, [col] auto);
+    grid-template-rows: repeat(4, [row] auto);
+    justify-content: stretch;
+    align-content: center;
+}
+
+.top {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.mid-top {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.bottom {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
