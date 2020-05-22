@@ -1,3 +1,6 @@
+<!-- HTML for Rock, Paper, Scissors
+By Samantha Tjong -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/reset.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="styles/main.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="styles/slkscre-stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="styles/slkscreb-stylesheet.css" type="text/css" charset="utf-8" />
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+</head>
 <body>
     <div class="main-container">
+        <!-- Section for Computer -->
         <div class="top">
             <div class="top-image-wrapper">
                 <a id="computerRock" href="#">
@@ -28,18 +40,20 @@
                 </a> 
             </div>
         </div>
+        <!-- Section for Title and Scores -->
         <div class="mid">
             <div class="middle-wrapper">
-                <span>Computer Score: </span><span id="computerScore">0</span>
-                    
+                <span>Computer Score: </span><span id="computerScore">0</span>      
                 <div class="title">
-                    <h1>Rock, Paper, Scissors</h1>
+                    <h1 id="titleText">Rock, Paper, Scissors</h1>
+                        <!-- <h2>Click a hand below to play.</h2> -->
                 </div>
                 <span>Player Score: </span><span id="playerScore">0</span>
             </div>
         </div>
+        <!-- Section for Player -->
         <div class="bottom">
-            <div class="bottom-image-wrapper">
+            <div id="playerBtns" class="bottom-image-wrapper">
                 <a id="playerRock" href="#">
                     <img class="btn playerBtn off" src="images/rock.svg" onerror="this.onerror=null; this.src=images/rock.png">
                 </a>
@@ -52,12 +66,20 @@
             </div>    
         </div>
     </div>
-    <div class="bottom-image-wrapper">
-        <button id="try-again">Try Again</button>
+    <!-- Section for Results modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <h3 id="resultText">Result!</h3>
+          <br>
+          <button id="try-again">Play Again</button>
+        </div>
     </div>
+    <!-- Section for footer -->
     <div class="footer">
         <p>Created by Samantha Tjong</p>
       </div>
+
+    <!-- Scripts -->
     <script src="scripts/main.js"></script>
 </body>
 </html>
