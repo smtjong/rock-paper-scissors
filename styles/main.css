@@ -4,10 +4,10 @@ By Samantha Tjong */
 html {
     background: 
         repeating-linear-gradient(0deg,rgb(210, 210, 210),rgb(210, 210, 210) 2px,rgb(235, 235, 235) 0,rgb(235, 235, 235) 4px);
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'silkscreen_expandednormal', Courier, monospace;
     font-size: 32px;
     text-align: center;
@@ -30,7 +30,7 @@ a {
 }
 
 img {
-    width: 12vw;
+    width: 6rem;
 }
 
 .title {
@@ -67,6 +67,7 @@ img {
     position: fixed;
     top: 0;
     width: 100%;
+    transform: scaleY(-1);
 }
 
 .bottom-image-wrapper {
@@ -118,12 +119,12 @@ img {
     }
 
         .btn.computerBtn.off {
-            transform: scaleY(-1)translateY(30%);
+            transform: translateY(30%);
             filter: grayscale(80%);
         }
 
         .btn.computerBtn.on {
-            transform: scaleY(-1) translateY(15%) scale(1.1);
+            transform: translateY(15%) scale(1.1);
             filter: grayscale(20%);
         }
 
