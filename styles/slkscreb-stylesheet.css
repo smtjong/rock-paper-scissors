@@ -2,7 +2,6 @@
     font-family: 'silkscreen_expandedbold';
     src: url('slkscreb-webfont.eot');
     src: url('slkscreb-webfont.eot?#iefix') format('embedded-opentype'),
-         url('slkscreb-webfont.woff2') format('woff2'),
          url('slkscreb-webfont.woff') format('woff'),
          url('slkscreb-webfont.ttf') format('truetype'),
          url('slkscreb-webfont.svg#silkscreen_expandedbold') format('svg');

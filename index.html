@@ -15,32 +15,49 @@
 
 <body>
     <div class="main-container">
-        <button id="computerRock">
-            ROCK
-        </button>
-        <button id="computerPaper">
-            PAPER
-        </button>
-        <button id="computerScissors">
-            SCISSORS
-        </button>
-        <br>
-        <span>Computer Score: </span><span id="computerScore">0</span>    
-        <div>
-            <h1>Rock, Paper, Scissors</h1>
+        <div class="top">
+            <div class="top-image-wrapper">
+                <a id="computerRock" href="#">
+                    <img class="btn computerBtn off" src="images/rock.svg" onerror="this.onerror=null; this.src=images/rock.png">
+                </a>
+                <a id="computerPaper" href="#">
+                    <img class="btn computerBtn off" src="images/paper.svg" onerror="this.onerror=null; this.src=images/paper.png">
+                </a>
+                <a id="computerScissors" href="#">
+                    <img class="btn computerBtn off" src="images/scissors.svg" onerror="this.onerror=null; this.src=images/scissors.png">
+                </a> 
+            </div>
         </div>
-        <span>Player Score: </span><span id="playerScore">0</span>    
-        <br>    
-        <button id="playerRock" class="playerBtn">
-            ROCK
-        </button>
-        <button id="playerPaper" class="playerBtn">
-            PAPER
-        </button>
-        <button id="playerScissors" class="playerBtn">
-            SCISSORS
-        </button>        
+        <div class="mid">
+            <div class="middle-wrapper">
+                <span>Computer Score: </span><span id="computerScore">0</span>
+                    
+                <div class="title">
+                    <h1>Rock, Paper, Scissors</h1>
+                </div>
+                <span>Player Score: </span><span id="playerScore">0</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom-image-wrapper">
+                <a id="playerRock" href="#">
+                    <img class="btn playerBtn off" src="images/rock.svg" onerror="this.onerror=null; this.src=images/rock.png">
+                </a>
+                <a id="playerPaper" href="#">
+                    <img class="btn playerBtn off" src="images/paper.svg" onerror="this.onerror=null; this.src=images/paper.png">
+                </a>
+                <a id="playerScissors" href="#">
+                    <img class="btn playerBtn off" src="images/scissors.svg" onerror="this.onerror=null; this.src=images/scissors.png">
+                </a>    
+            </div>    
+        </div>
     </div>
+    <div class="bottom-image-wrapper">
+        <button id="try-again">Try Again</button>
+    </div>
+    <div class="footer">
+        <p>Created by Samantha Tjong</p>
+      </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>

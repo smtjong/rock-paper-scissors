@@ -1,3 +1,18 @@
+
+const btnTryAgain = document.getElementById('try-again');
+btnTryAgain.addEventListener('click', resetStyles);
+
+function resetStyles() {
+    imgArr = document.querySelectorAll('img');
+    console.log(imgArr);
+    for (i=0; i <= imgArr.length; i++) {
+        if (imgArr[i].classList.contains('on')) {
+            imgArr[i].classList.remove('on');
+            imgArr[i].classList.add('off');
+        } continue;
+    }
+}
+
 // document.addEventListener("DOMContentLoaded", game);
 
 const btnPlayerRock = document.getElementById('playerRock');
@@ -12,11 +27,14 @@ btnPlayerScissors.addEventListener('click', playRound);
 let playerScore = 0;
 let computerScore = 0;
 
+let playerSelection
+
 //Obtain player's input and compare to computer's hand to determine outcome of the round
 function playRound(btn) {
-    let playerSelection = convertPlayerInput(btn.target.id);
+    playerSelection = convertPlayerInput(this.id);
     let computerSelection = computerPlay();
-    return playerSelection == "ROCK" && computerSelection == "ROCK" ? case1()
+    console.log(convertPlayerInput(this.id));
+    playerSelection == "ROCK" && computerSelection == "ROCK" ? case1()
     : playerSelection == "ROCK" && computerSelection == "PAPER" ? case2()
     : playerSelection == "ROCK" && computerSelection == "SCISSORS" ? case3()
     : playerSelection == "PAPER" && computerSelection == "ROCK" ? case4()
@@ -31,64 +49,79 @@ function playRound(btn) {
 function convertPlayerInput(btnId) {
     return btnId == "playerRock" ? "ROCK"
     : btnId == "playerPaper" ? "PAPER"
-    : "SCISSORS"
+    : btnId == "playerScissors" ? "SCISSORS"
+    : "invalid"
 }
+
+function modifyComputerGraphic(img) {
+    img.classList.remove('off');
+    img.classList.add('on');
+};
 
 function case1() {
     console.log("Computer played ROCK. Tie.");
-    document.getElementById('computerRock').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerRock').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerRock').querySelectorAll('img')[0]);
 }
 
 function case2() {
     console.log("Computer played PAPER. You lose.")
-    document.getElementById('computerPaper').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerPaper').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerRock').querySelectorAll('img')[0]);
     computerScore++;
     document.getElementById('computerScore').textContent = computerScore.toString();
 }
 
 function case3() {
     console.log("Computer played SCISSORS. You win.")
-    document.getElementById('computerScissors').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerScissors').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerRock').querySelectorAll('img')[0]);
     playerScore++;
     document.getElementById('playerScore').textContent = playerScore.toString();
 }
 
 function case4() {
     console.log("Computer played ROCK. You win.")
-    document.getElementById('computerRock').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerRock').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerPaper').querySelectorAll('img')[0]);
     playerScore++;
     document.getElementById('playerScore').textContent = playerScore.toString();
 }
 
 function case5() {
     console.log("Computer played PAPER. Tie.")
-    document.getElementById('computerPaper').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerPaper').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerPaper').querySelectorAll('img')[0]);
 }
 
 function case6() {
     console.log("Computer played SCISSORS. You lose.")
-    document.getElementById('computerScissors').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerScissors').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerPaper').querySelectorAll('img')[0]);
     computerScore++;
     document.getElementById('computerScore').textContent = computerScore.toString();
 }
 
 function case7() {
     console.log("Computer played ROCK. You lose.")
-    document.getElementById('computerRock').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerRock').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerScissors').querySelectorAll('img')[0]);
     computerScore++;
     document.getElementById('computerScore').textContent = computerScore.toString();
 }
 
 function case8() {
     console.log("Computer played PAPER. You win.")
-    document.getElementById('computerPaper').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerPaper').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerScissors').querySelectorAll('img')[0]);
     playerScore++;
     document.getElementById('playerScore').textContent = playerScore.toString();
 }
 
 function case9() {
     console.log("Computer played SCISSORS. Tie.")
-    document.getElementById('computerScissors').style.background = "red";
+    modifyComputerGraphic(document.getElementById('computerScissors').querySelectorAll('img')[0]);
+    modifyComputerGraphic(document.getElementById('playerScissors').querySelectorAll('img')[0]);
 }
 
 function case10() {
