@@ -173,4 +173,4 @@ function resetStyles() {
             imgArr[i].classList.add('off');
         } continue;
     }
-}
+};
