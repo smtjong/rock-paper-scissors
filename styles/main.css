@@ -13,7 +13,7 @@ html {
     font-size: 2.5vw;
     text-align: center;
     color:rgb(135, 125, 120);
-    height: 100%;
+    max-height: 100%;
     overflow: hidden;
 }
 
@@ -56,7 +56,7 @@ img {
     grid-row: 1 / 2;
 }
 
-.mid-top {
+.mid {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
@@ -81,8 +81,11 @@ img {
 
 .middle-wrapper {
     display: block;
-    height: 100%;
+    position: absolute;
+    width: 100%;
     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Button styles */
