@@ -214,7 +214,7 @@ img {
         font-size: 1rem;
     }
     .footer {
-        font-size: 0.5rem;
+        font-size: 0.7rem;
     }
 
     /* Buttons */
@@ -255,6 +255,9 @@ img {
     img {
         width: 20vw;
     }
+    h1 {
+        padding: 20px 0 20px 0;
+    }
     .modal-content {
         padding-top: 30px;
         padding-bottom: 30px;
@@ -263,7 +266,7 @@ img {
         margin-top: 20px;
     }
     .footer {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
     
     /* Buttons */
